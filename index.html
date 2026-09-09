@@ -247,7 +247,7 @@
         Découvre des films, documentaires, tutoriels et contenus divertissants
         sur une seule plateforme.
       </p>
-      <button class="watch-button" onclick="openVideo('Film de démonstration')">
+      <button class="watch-button" onclick="openVideo('Vidéo 1', 'video_1.mp4')">
         ▶ Regarder maintenant
       </button>
     </div>
@@ -266,75 +266,55 @@
 
     <div class="videos" id="videoList">
 
-      <article class="video-card" data-category="film" data-title="Film aventure">
+      <!-- Carte Vidéo 1 -->
+      <article class="video-card" data-category="film" data-title="Vidéo 1" data-video="video_1.mp4">
         <img
           class="thumbnail"
           src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=80"
-          alt="Film aventure"
+          alt="Vidéo 1"
         />
         <div class="video-info">
-          <h3>Film aventure</h3>
-          <p>Film · 1,2 M vues</p>
+          <h3>Vidéo 1</h3>
+          <p>Film · 1:07 min</p>
         </div>
       </article>
 
-      <article class="video-card" data-category="musique" data-title="Concert live">
+      <!-- Carte Vidéo 2 -->
+      <article class="video-card" data-category="musique" data-title="Vidéo 2" data-video="video_2.mp4">
         <img
           class="thumbnail"
           src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=80"
-          alt="Concert live"
+          alt="Vidéo 2"
         />
         <div class="video-info">
-          <h3>Concert live</h3>
-          <p>Musique · 890 k vues</p>
+          <h3>Vidéo 2</h3>
+          <p>Musique · 1:02 min</p>
         </div>
       </article>
 
-      <article class="video-card" data-category="sport" data-title="Les meilleurs moments">
+      <!-- Carte Vidéo 3 -->
+      <article class="video-card" data-category="sport" data-title="Vidéo 3" data-video="video_3.mp4">
         <img
           class="thumbnail"
           src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=80"
-          alt="Sport"
+          alt="Vidéo 3"
         />
         <div class="video-info">
-          <h3>Les meilleurs moments</h3>
-          <p>Sport · 540 k vues</p>
+          <h3>Vidéo 3</h3>
+          <p>Sport · 0:37 min</p>
         </div>
       </article>
 
-      <article class="video-card" data-category="education" data-title="Apprendre facilement">
+      <!-- Carte Vidéo 4 -->
+      <article class="video-card" data-category="education" data-title="Vidéo 4" data-video="video_4.mp4">
         <img
           class="thumbnail"
           src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80"
-          alt="Éducation"
+          alt="Vidéo 4"
         />
         <div class="video-info">
-          <h3>Apprendre facilement</h3>
-          <p>Éducation · 320 k vues</p>
-        </div>
-      </article>
-
-      <article class="video-card" data-category="film" data-title="Le grand voyage">
-        <img
-          class="thumbnail"
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
-          alt="Voyage"
-        />
-        <div class="video-info">
-          <h3>Le grand voyage</h3>
-          <p>Film · 220 k vues</p>
-        </div>
-      </article>
-
-      <article class="video-card" data-category="musique" data-title="Studio musical">
-        <img
-          class="thumbnail"
-          src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=80"
-          alt="Studio musical"
-        />
-        <div class="video-info">
-          <h3>Studio musical</h3>
-          <p>Musique · 180 k vues</p>
+          <h3>Vidéo 4</h3>
+          <p>Éducation · 0:52 min</p>
         </div>
       </article>
 
@@ -350,11 +330,8 @@
       <button class="close" onclick="closeVideo()">×</button>
       <h2 id="videoTitle" style="margin-bottom: 15px;"></h2>
 
-      <video controls autoplay>
-        <source
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
-          type="video/mp4"
-        />
+      <video id="mainVideoPlayer" controls autoplay>
+        <source id="videoSource" src="" type="video/mp4" />
         Ton navigateur ne supporte pas la lecture vidéo.
       </video>
     </div>
@@ -363,20 +340,29 @@
   <script>
     const cards = document.querySelectorAll(".video-card");
     const searchInput = document.getElementById("searchInput");
+    const videoPlayer = document.getElementById("mainVideoPlayer");
+    const videoSource = document.getElementById("videoSource");
 
     cards.forEach(card => {
       card.addEventListener("click", () => {
         const title = card.dataset.title;
-        openVideo(title);
+        const videoSrc = card.dataset.video;
+        openVideo(title, videoSrc);
       });
     });
 
-    function openVideo(title) {
+    function openVideo(title, src) {
       document.getElementById("videoTitle").textContent = title;
+      
+      // Mise à jour de la vidéo et lancement de la lecture
+      videoSource.src = src;
+      videoPlayer.load();
+      
       document.getElementById("videoModal").style.display = "flex";
     }
 
     function closeVideo() {
+      videoPlayer.pause(); // Mettre en pause la vidéo quand la fenêtre se ferme
       document.getElementById("videoModal").style.display = "none";
     }
 
