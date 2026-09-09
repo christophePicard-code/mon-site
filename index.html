@@ -354,7 +354,6 @@
     function openVideo(title, src) {
       document.getElementById("videoTitle").textContent = title;
       
-      // Mise à jour de la vidéo et lancement de la lecture
       videoSource.src = src;
       videoPlayer.load();
       
@@ -362,7 +361,7 @@
     }
 
     function closeVideo() {
-      videoPlayer.pause(); // Mettre en pause la vidéo quand la fenêtre se ferme
+      videoPlayer.pause();
       document.getElementById("videoModal").style.display = "none";
     }
 
