@@ -6,222 +6,35 @@
   <title>VidéoZone</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #0f0f0f;
-      color: white;
-    }
-
-    header {
-      background: #181818;
-      padding: 18px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      color: #ff1744;
-      font-size: 25px;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    .search {
-      width: 45%;
-      padding: 12px 18px;
-      border: none;
-      border-radius: 25px;
-      background: #2b2b2b;
-      color: white;
-      outline: none;
-      font-size: 15px;
-    }
-
-    .login {
-      background: #ff1744;
-      color: white;
-      border: none;
-      padding: 11px 18px;
-      border-radius: 22px;
-      cursor: pointer;
-    }
-
-    .hero {
-      min-height: 400px;
-      padding: 70px 8%;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.35)),
-        url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
-    }
-
-    .hero-content {
-      max-width: 560px;
-    }
-
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 18px;
-    }
-
-    .hero p {
-      color: #ddd;
-      line-height: 1.6;
-      margin-bottom: 25px;
-    }
-
-    .watch-button {
-      background: #ff1744;
-      color: white;
-      border: none;
-      padding: 14px 25px;
-      border-radius: 7px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .categories {
-      padding: 25px 6% 5px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .category {
-      border: none;
-      background: #292929;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-
-    .category.active,
-    .category:hover {
-      background: #ff1744;
-    }
-
-    main {
-      padding: 25px 6% 50px;
-    }
-
-    .section-title {
-      margin-bottom: 20px;
-      font-size: 25px;
-    }
-
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 23px;
-    }
-
-    .video-card {
-      background: #1c1c1c;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform .2s, background .2s;
-    }
-
-    .video-card:hover {
-      transform: translateY(-5px);
-      background: #292929;
-    }
-
-    .thumbnail {
-      height: 145px;
-      width: 100%;
-      object-fit: cover;
-    }
-
-    .video-info {
-      padding: 14px;
-    }
-
-    .video-info h3 {
-      font-size: 17px;
-      margin-bottom: 8px;
-    }
-
-    .video-info p {
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #181818;
-      color: #999;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.85);
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      z-index: 20;
-    }
-
-    .modal-content {
-      width: 900px;
-      max-width: 100%;
-      background: #181818;
-      padding: 18px;
-      border-radius: 10px;
-      position: relative;
-    }
-
-    .modal video {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .close {
-      position: absolute;
-      right: 12px;
-      top: 8px;
-      background: #ff1744;
-      border: none;
-      color: white;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    @media (max-width: 700px) {
-      header {
-        flex-wrap: wrap;
-      }
-
-      .search {
-        order: 3;
-        width: 100%;
-      }
-
-      .hero h1 {
-        font-size: 35px;
-      }
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #0f0f0f; color: white; }
+    header { background: #181818; padding: 18px 6%; display: flex; align-items: center; justify-content: space-between; gap: 20px; position: sticky; top: 0; z-index: 10; }
+    .logo { color: #ff1744; font-size: 25px; font-weight: bold; white-space: nowrap; }
+    .search { width: 45%; padding: 12px 18px; border: none; border-radius: 25px; background: #2b2b2b; color: white; outline: none; font-size: 15px; }
+    .login { background: #ff1744; color: white; border: none; padding: 11px 18px; border-radius: 22px; cursor: pointer; }
+    .hero { min-height: 400px; padding: 70px 8%; display: flex; align-items: center; background: linear-gradient(90deg, rgba(0,0,0,.9), rgba(0,0,0,.35)), url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1600&q=80") center/cover; }
+    .hero-content { max-width: 560px; }
+    .hero h1 { font-size: 48px; margin-bottom: 18px; }
+    .hero p { color: #ddd; line-height: 1.6; margin-bottom: 25px; }
+    .watch-button { background: #ff1744; color: white; border: none; padding: 14px 25px; border-radius: 7px; font-size: 16px; cursor: pointer; }
+    .categories { padding: 25px 6% 5px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .category { border: none; background: #292929; color: white; padding: 10px 18px; border-radius: 20px; cursor: pointer; }
+    .category.active, .category:hover { background: #ff1744; }
+    main { padding: 25px 6% 50px; }
+    .section-title { margin-bottom: 20px; font-size: 25px; }
+    .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 23px; }
+    .video-card { background: #1c1c1c; border-radius: 10px; overflow: hidden; cursor: pointer; transition: transform .2s, background .2s; }
+    .video-card:hover { transform: translateY(-5px); background: #292929; }
+    .thumbnail { height: 145px; width: 100%; object-fit: cover; }
+    .video-info { padding: 14px; }
+    .video-info h3 { font-size: 17px; margin-bottom: 8px; }
+    .video-info p { color: #aaa; font-size: 14px; }
+    footer { text-align: center; padding: 25px; background: #181818; color: #999; }
+    .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.85); align-items: center; justify-content: center; padding: 20px; z-index: 20; }
+    .modal-content { width: 900px; max-width: 100%; background: #181818; padding: 18px; border-radius: 10px; position: relative; }
+    .modal video { width: 100%; border-radius: 8px; }
+    .close { position: absolute; right: 12px; top: 8px; background: #ff1744; border: none; color: white; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px; }
+    @media (max-width: 700px) { header { flex-wrap: wrap; } .search { order: 3; width: 100%; } .hero h1 { font-size: 35px; } }
   </style>
 </head>
 
@@ -229,27 +42,15 @@
 
   <header>
     <div class="logo">▶ VidéoZone</div>
-
-    <input
-      type="text"
-      id="searchInput"
-      class="search"
-      placeholder="Rechercher une vidéo..."
-    />
-
+    <input type="text" id="searchInput" class="search" placeholder="Rechercher une vidéo..." />
     <button class="login">Connexion</button>
   </header>
 
   <section class="hero">
     <div class="hero-content">
       <h1>Regarde tes vidéos préférées</h1>
-      <p>
-        Découvre des films, documentaires, tutoriels et contenus divertissants
-        sur une seule plateforme.
-      </p>
-      <button class="watch-button" onclick="openVideo('Vidéo 1', 'video_1.mp4')">
-        ▶ Regarder maintenant
-      </button>
+      <p>Découvre des films, documentaires, tutoriels et contenus divertissants sur une seule plateforme.</p>
+      <button class="watch-button" onclick="openVideo('Vidéo 1', 'video_1.mp4')">▶ Regarder maintenant</button>
     </div>
   </section>
 
@@ -263,55 +64,34 @@
 
   <main>
     <h2 class="section-title">Vidéos populaires</h2>
-
     <div class="videos" id="videoList">
 
-      <!-- Carte Vidéo 1 -->
       <article class="video-card" data-category="film" data-title="Vidéo 1" data-video="video_1.mp4">
-        <img
-          class="thumbnail"
-          src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=80"
-          alt="Vidéo 1"
-        />
+        <img class="thumbnail" src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=700&q=80" alt="Vidéo 1" />
         <div class="video-info">
           <h3>Vidéo 1</h3>
           <p>Film · 1:07 min</p>
         </div>
       </article>
 
-      <!-- Carte Vidéo 2 -->
       <article class="video-card" data-category="musique" data-title="Vidéo 2" data-video="video_2.mp4">
-        <img
-          class="thumbnail"
-          src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=80"
-          alt="Vidéo 2"
-        />
+        <img class="thumbnail" src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=80" alt="Vidéo 2" />
         <div class="video-info">
           <h3>Vidéo 2</h3>
           <p>Musique · 1:02 min</p>
         </div>
       </article>
 
-      <!-- Carte Vidéo 3 -->
       <article class="video-card" data-category="sport" data-title="Vidéo 3" data-video="video_3.mp4">
-        <img
-          class="thumbnail"
-          src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=80"
-          alt="Vidéo 3"
-        />
+        <img class="thumbnail" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=80" alt="Vidéo 3" />
         <div class="video-info">
           <h3>Vidéo 3</h3>
           <p>Sport · 0:37 min</p>
         </div>
       </article>
 
-      <!-- Carte Vidéo 4 -->
       <article class="video-card" data-category="education" data-title="Vidéo 4" data-video="video_4.mp4">
-        <img
-          class="thumbnail"
-          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80"
-          alt="Vidéo 4"
-        />
+        <img class="thumbnail" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80" alt="Vidéo 4" />
         <div class="video-info">
           <h3>Vidéo 4</h3>
           <p>Éducation · 0:52 min</p>
@@ -321,15 +101,12 @@
     </div>
   </main>
 
-  <footer>
-    © 2026 VidéoZone — Tous droits réservés
-  </footer>
+  <footer>© 2026 VidéoZone — Tous droits réservés</footer>
 
   <div class="modal" id="videoModal">
     <div class="modal-content">
       <button class="close" onclick="closeVideo()">×</button>
       <h2 id="videoTitle" style="margin-bottom: 15px;"></h2>
-
       <video id="mainVideoPlayer" controls autoplay>
         <source id="videoSource" src="" type="video/mp4" />
         Ton navigateur ne supporte pas la lecture vidéo.
@@ -345,18 +122,14 @@
 
     cards.forEach(card => {
       card.addEventListener("click", () => {
-        const title = card.dataset.title;
-        const videoSrc = card.dataset.video;
-        openVideo(title, videoSrc);
+        openVideo(card.dataset.title, card.dataset.video);
       });
     });
 
     function openVideo(title, src) {
       document.getElementById("videoTitle").textContent = title;
-      
       videoSource.src = src;
       videoPlayer.load();
-      
       document.getElementById("videoModal").style.display = "flex";
     }
 
@@ -366,39 +139,22 @@
     }
 
     function filterVideos(category, button) {
-      document.querySelectorAll(".category").forEach(btn => {
-        btn.classList.remove("active");
-      });
-
+      document.querySelectorAll(".category").forEach(btn => btn.classList.remove("active"));
       button.classList.add("active");
-
       cards.forEach(card => {
-        if (category === "all" || card.dataset.category === category) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
+        card.style.display = (category === "all" || card.dataset.category === category) ? "block" : "none";
       });
     }
 
     searchInput.addEventListener("input", () => {
       const search = searchInput.value.toLowerCase();
-
       cards.forEach(card => {
-        const title = card.dataset.title.toLowerCase();
-
-        card.style.display = title.includes(search)
-          ? "block"
-          : "none";
+        card.style.display = card.dataset.title.toLowerCase().includes(search) ? "block" : "none";
       });
     });
 
     window.addEventListener("click", event => {
-      const modal = document.getElementById("videoModal");
-
-      if (event.target === modal) {
-        closeVideo();
-      }
+      if (event.target === document.getElementById("videoModal")) closeVideo();
     });
   </script>
 
