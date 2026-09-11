@@ -113,14 +113,19 @@
     </div>
   </div>
 
-  <script>
+<script>
     const cards = document.querySelectorAll(".video-card");
     const searchInput = document.getElementById("searchInput");
     const videoPlayer = document.getElementById("mainVideoPlayer");
 
+    // Base URL CDN pour délivrer les MP4 avec les bons en-têtes vidéo
+    const cdnBase = "https://cdn.jsdelivr.net/gh/christophePicard-code/mon-site@main/";
+
     cards.forEach(card => {
       card.addEventListener("click", () => {
-        openVideo(card.dataset.title, card.dataset.video);
+        // Extraction du nom de fichier (ex: video_1.mp4)
+        const fileName = card.dataset.video.split('/').pop();
+        openVideo(card.dataset.title, cdnBase + fileName);
       });
     });
 
@@ -131,7 +136,7 @@
       document.getElementById("videoModal").style.display = "flex";
       
       videoPlayer.play().catch(err => {
-        console.log("Lecture automatique bloquée, clique sur Play dans le lecteur.", err);
+        console.log("Lecture automatique bloquée : clique sur Play.", err);
       });
     }
 
