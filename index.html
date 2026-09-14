@@ -26,8 +26,8 @@
     .hero p { color: #ddd; line-height: 1.6; margin-bottom: 25px; }
     .watch-button { background: #ff1744; color: white; border: none; padding: 14px 25px; border-radius: 7px; font-size: 16px; cursor: pointer; }
     
-    .categories { padding: 25px 6% 5px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .category { border: none; background: #292929; color: white; padding: 10px 18px; border-radius: 20px; cursor: pointer; }
+    .categories { padding: 25px 6% 5px; display: flex; gap: 10px; flex-wrap: wrap; max-height: 120px; overflow-y: auto; }
+    .category { border: none; background: #292929; color: white; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 14px; }
     .category.active, .category:hover { background: #ff1744; }
     
     main { padding: 25px 6% 50px; }
@@ -82,6 +82,19 @@
     <button class="category" onclick="filterVideos('video_5', this)">video_5</button>
     <button class="category" onclick="filterVideos('video_6', this)">video_6</button>
     <button class="category" onclick="filterVideos('video_7', this)">video_7</button>
+    <button class="category" onclick="filterVideos('video_8', this)">video_8</button>
+    <button class="category" onclick="filterVideos('video_9', this)">video_9</button>
+    <button class="category" onclick="filterVideos('video_10', this)">video_10</button>
+    <button class="category" onclick="filterVideos('video_11', this)">video_11</button>
+    <button class="category" onclick="filterVideos('video_12', this)">video_12</button>
+    <button class="category" onclick="filterVideos('video_13', this)">video_13</button>
+    <button class="category" onclick="filterVideos('video_14', this)">video_14</button>
+    <button class="category" onclick="filterVideos('video_15', this)">video_15</button>
+    <button class="category" onclick="filterVideos('video_16', this)">video_16</button>
+    <button class="category" onclick="filterVideos('video_17', this)">video_17</button>
+    <button class="category" onclick="filterVideos('video_18', this)">video_18</button>
+    <button class="category" onclick="filterVideos('video_19', this)">video_19</button>
+    <button class="category" onclick="filterVideos('video_20', this)">video_20</button>
   </div>
 
   <main>
@@ -90,58 +103,102 @@
 
       <article class="video-card" data-category="video_1" data-title="video_1" data-video="./video_1.mp4">
         <img class="thumbnail" src="./thumb_1.png" alt="video_1" />
-        <div class="video-info">
-          <h3>video_1</h3>
-          <p>Vidéo · 1:07 min</p>
-        </div>
+        <div class="video-info"><h3>video_1</h3><p>Vidéo · 1:07 min</p></div>
       </article>
 
       <article class="video-card" data-category="video_2" data-title="video_2" data-video="./video_2.mp4">
         <img class="thumbnail" src="./thumb_2.png" alt="video_2" />
-        <div class="video-info">
-          <h3>video_2</h3>
-          <p>Vidéo · 1:02 min</p>
-        </div>
+        <div class="video-info"><h3>video_2</h3><p>Vidéo · 1:02 min</p></div>
       </article>
 
       <article class="video-card" data-category="video_3" data-title="video_3" data-video="./video_3.mp4">
         <img class="thumbnail" src="./thumb_3.png" alt="video_3" />
-        <div class="video-info">
-          <h3>video_3</h3>
-          <p>Vidéo · 0:37 min</p>
-        </div>
+        <div class="video-info"><h3>video_3</h3><p>Vidéo · 0:37 min</p></div>
       </article>
 
       <article class="video-card" data-category="video_4" data-title="video_4" data-video="./video_4.mp4">
         <img class="thumbnail" src="./thumb_4.png" alt="video_4" />
-        <div class="video-info">
-          <h3>video_4</h3>
-          <p>Vidéo · 0:52 min</p>
-        </div>
+        <div class="video-info"><h3>video_4</h3><p>Vidéo · 0:52 min</p></div>
       </article>
 
       <article class="video-card" data-category="video_5" data-title="video_5" data-video="./video_5.mp4">
         <img class="thumbnail" src="./thumb_5.png" alt="video_5" />
-        <div class="video-info">
-          <h3>video_5</h3>
-          <p>Vidéo · 0:37 min</p>
-        </div>
+        <div class="video-info"><h3>video_5</h3><p>Vidéo · 0:37 min</p></div>
       </article>
 
       <article class="video-card" data-category="video_6" data-title="video_6" data-video="./video_6.mp4">
         <img class="thumbnail" src="./thumb_6.png" alt="video_6" />
-        <div class="video-info">
-          <h3>video_6</h3>
-          <p>Vidéo · 1:00 min</p>
-        </div>
+        <div class="video-info"><h3>video_6</h3><p>Vidéo · 1:00 min</p></div>
       </article>
 
       <article class="video-card" data-category="video_7" data-title="video_7" data-video="./video_7.mp4">
         <img class="thumbnail" src="./thumb_7.png" alt="video_7" />
-        <div class="video-info">
-          <h3>video_7</h3>
-          <p>Vidéo · 1:15 min</p>
-        </div>
+        <div class="video-info"><h3>video_7</h3><p>Vidéo · 1:15 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_8" data-title="video_8" data-video="./video_8.mp4">
+        <img class="thumbnail" src="./thumb_8.png" alt="video_8" />
+        <div class="video-info"><h3>video_8</h3><p>Vidéo · 1:20 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_9" data-title="video_9" data-video="./video_9.mp4">
+        <img class="thumbnail" src="./thumb_9.png" alt="video_9" />
+        <div class="video-info"><h3>video_9</h3><p>Vidéo · 0:45 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_10" data-title="video_10" data-video="./video_10.mp4">
+        <img class="thumbnail" src="./thumb_10.png" alt="video_10" />
+        <div class="video-info"><h3>video_10</h3><p>Vidéo · 1:10 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_11" data-title="video_11" data-video="./video_11.mp4">
+        <img class="thumbnail" src="./thumb_11.png" alt="video_11" />
+        <div class="video-info"><h3>video_11</h3><p>Vidéo · 0:55 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_12" data-title="video_12" data-video="./video_12.mp4">
+        <img class="thumbnail" src="./thumb_12.png" alt="video_12" />
+        <div class="video-info"><h3>video_12</h3><p>Vidéo · 1:30 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_13" data-title="video_13" data-video="./video_13.mp4">
+        <img class="thumbnail" src="./thumb_13.png" alt="video_13" />
+        <div class="video-info"><h3>video_13</h3><p>Vidéo · 1:05 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_14" data-title="video_14" data-video="./video_14.mp4">
+        <img class="thumbnail" src="./thumb_14.png" alt="video_14" />
+        <div class="video-info"><h3>video_14</h3><p>Vidéo · 0:40 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_15" data-title="video_15" data-video="./video_15.mp4">
+        <img class="thumbnail" src="./thumb_15.png" alt="video_15" />
+        <div class="video-info"><h3>video_15</h3><p>Vidéo · 1:18 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_16" data-title="video_16" data-video="./video_16.mp4">
+        <img class="thumbnail" src="./thumb_16.png" alt="video_16" />
+        <div class="video-info"><h3>video_16</h3><p>Vidéo · 0:50 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_17" data-title="video_17" data-video="./video_17.mp4">
+        <img class="thumbnail" src="./thumb_17.png" alt="video_17" />
+        <div class="video-info"><h3>video_17</h3><p>Vidéo · 1:25 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_18" data-title="video_18" data-video="./video_18.mp4">
+        <img class="thumbnail" src="./thumb_18.png" alt="video_18" />
+        <div class="video-info"><h3>video_18</h3><p>Vidéo · 1:00 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_19" data-title="video_19" data-video="./video_19.mp4">
+        <img class="thumbnail" src="./thumb_19.png" alt="video_19" />
+        <div class="video-info"><h3>video_19</h3><p>Vidéo · 0:48 min</p></div>
+      </article>
+
+      <article class="video-card" data-category="video_20" data-title="video_20" data-video="./video_20.mp4">
+        <img class="thumbnail" src="./thumb_20.png" alt="video_20" />
+        <div class="video-info"><h3>video_20</h3><p>Vidéo · 1:12 min</p></div>
       </article>
 
     </div>
