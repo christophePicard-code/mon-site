@@ -69,136 +69,148 @@
     <div class="hero-content">
       <h1>Regarde tes vidéos préférées</h1>
       <p>Découvre des films, documentaires, tutoriels et contenus divertissants sur une seule plateforme.</p>
-      <button class="watch-button" onclick="openVideo('video_1', './video_1.mp4')">▶ Regarder maintenant</button>
+      <button class="watch-button" onclick="openVideo('Bungo Stray Dogs - Tanizaki & Naomi Edit', './video_1.mp4')">▶ Regarder maintenant</button>
     </div>
   </section>
 
   <div class="categories">
     <button class="category active" onclick="filterVideos('all', this)">Tout</button>
-    <button class="category" onclick="filterVideos('video_1', this)">video_1</button>
-    <button class="category" onclick="filterVideos('video_2', this)">video_2</button>
-    <button class="category" onclick="filterVideos('video_3', this)">video_3</button>
-    <button class="category" onclick="filterVideos('video_4', this)">video_4</button>
-    <button class="category" onclick="filterVideos('video_5', this)">video_5</button>
-    <button class="category" onclick="filterVideos('video_6', this)">video_6</button>
-    <button class="category" onclick="filterVideos('video_7', this)">video_7</button>
-    <button class="category" onclick="filterVideos('video_8', this)">video_8</button>
-    <button class="category" onclick="filterVideos('video_9', this)">video_9</button>
-    <button class="category" onclick="filterVideos('video_10', this)">video_10</button>
-    <button class="category" onclick="filterVideos('video_11', this)">video_11</button>
-    <button class="category" onclick="filterVideos('video_12', this)">video_12</button>
-    <button class="category" onclick="filterVideos('video_13', this)">video_13</button>
-    <button class="category" onclick="filterVideos('video_14', this)">video_14</button>
-    <button class="category" onclick="filterVideos('video_15', this)">video_15</button>
-    <button class="category" onclick="filterVideos('video_16', this)">video_16</button>
-    <button class="category" onclick="filterVideos('video_17', this)">video_17</button>
-    <button class="category" onclick="filterVideos('video_18', this)">video_18</button>
-    <button class="category" onclick="filterVideos('video_19', this)">video_19</button>
-    <button class="category" onclick="filterVideos('video_20', this)">video_20</button>
+    <button class="category" onclick="filterVideos('Bungo Stray Dogs', this)">Bungo Stray Dogs</button>
+    <button class="category" onclick="filterVideos('Demon Slayer', this)">Demon Slayer</button>
+    <button class="category" onclick="filterVideos('Jujutsu Kaisen', this)">Jujutsu Kaisen</button>
+    <button class="category" onclick="filterVideos('The Quintessential Quintuplets', this)">The Quintessential Quintuplets</button>
+    <button class="category" onclick="filterVideos('One Piece', this)">One Piece</button>
+    <button class="category" onclick="filterVideos('Mushoku Tensei', this)">Mushoku Tensei</button>
+    <button class="category" onclick="filterVideos('Étincelles de demain', this)">Étincelles de demain</button>
+    <button class="category" onclick="filterVideos('Bleach', this)">Bleach</button>
+    <button class="category" onclick="filterVideos('My Hero Academia', this)">My Hero Academia</button>
+    <button class="category" onclick="filterVideos('Weathering With You', this)">Weathering With You</button>
+    <button class="category" onclick="filterVideos('Black Clover', this)">Black Clover</button>
+    <button class="category" onclick="filterVideos('Solo Leveling x Jujutsu Kaisen', this)">Solo Leveling x Jujutsu Kaisen</button>
   </div>
 
   <main>
     <h2 class="section-title">Vidéos populaires</h2>
     <div class="videos" id="videoList">
 
-      <article class="video-card" data-category="video_1" data-title="video_1" data-video="./video_1.mp4">
-        <img class="thumbnail" src="./thumb_1.png" alt="video_1" />
-        <div class="video-info"><h3>video_1</h3><p>Vidéo · 1:07 min</p></div>
+      <!-- Vidéo 1 -->
+      <article class="video-card" data-category="Bungo Stray Dogs" data-title="Bungo Stray Dogs - Tanizaki & Naomi Edit" data-video="./video_1.mp4">
+        <img class="thumbnail" src="./thumb_1.png" alt="Bungo Stray Dogs" />
+        <div class="video-info"><h3>Bungo Stray Dogs - Tanizaki & Naomi Edit</h3><p>Vidéo · 0:21 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_2" data-title="video_2" data-video="./video_2.mp4">
-        <img class="thumbnail" src="./thumb_2.png" alt="video_2" />
-        <div class="video-info"><h3>video_2</h3><p>Vidéo · 1:02 min</p></div>
+      <!-- Vidéo 2 -->
+      <article class="video-card" data-category="Demon Slayer" data-title="Demon Slayer - Tanjiro vs Akaza Edit" data-video="./video_2.mp4">
+        <img class="thumbnail" src="./thumb_2.png" alt="Demon Slayer" />
+        <div class="video-info"><h3>Demon Slayer - Tanjiro vs Akaza Edit</h3><p>Vidéo · 0:29 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_3" data-title="video_3" data-video="./video_3.mp4">
-        <img class="thumbnail" src="./thumb_3.png" alt="video_3" />
-        <div class="video-info"><h3>video_3</h3><p>Vidéo · 0:37 min</p></div>
+      <!-- Vidéo 3 -->
+      <article class="video-card" data-category="Jujutsu Kaisen" data-title="Jujutsu Kaisen - Yuji Itadori Edit" data-video="./video_3.mp4">
+        <img class="thumbnail" src="./thumb_3.png" alt="Jujutsu Kaisen" />
+        <div class="video-info"><h3>Jujutsu Kaisen - Yuji Itadori Edit</h3><p>Vidéo · 0:17 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_4" data-title="video_4" data-video="./video_4.mp4">
-        <img class="thumbnail" src="./thumb_4.png" alt="video_4" />
-        <div class="video-info"><h3>video_4</h3><p>Vidéo · 0:52 min</p></div>
+      <!-- Vidéo 4 -->
+      <article class="video-card" data-category="The Quintessential Quintuplets" data-title="The Quintessential Quintuplets Edit" data-video="./video_4.mp4">
+        <img class="thumbnail" src="./thumb_4.png" alt="The Quintessential Quintuplets" />
+        <div class="video-info"><h3>The Quintessential Quintuplets Edit</h3><p>Vidéo · 0:15 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_5" data-title="video_5" data-video="./video_5.mp4">
-        <img class="thumbnail" src="./thumb_5.png" alt="video_5" />
-        <div class="video-info"><h3>video_5</h3><p>Vidéo · 0:37 min</p></div>
+      <!-- Vidéo 5 -->
+      <article class="video-card" data-category="One Piece" data-title="One Piece - Luffy Gear 5 Edit" data-video="./video_5.mp4">
+        <img class="thumbnail" src="./thumb_5.png" alt="One Piece" />
+        <div class="video-info"><h3>One Piece - Luffy Gear 5 Edit</h3><p>Vidéo · 0:21 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_6" data-title="video_6" data-video="./video_6.mp4">
-        <img class="thumbnail" src="./thumb_6.png" alt="video_6" />
-        <div class="video-info"><h3>video_6</h3><p>Vidéo · 1:00 min</p></div>
+      <!-- Vidéo 6 -->
+      <article class="video-card" data-category="Mushoku Tensei" data-title="Mushoku Tensei - Rudeus vs Orsted Edit" data-video="./video_6.mp4">
+        <img class="thumbnail" src="./thumb_6.png" alt="Mushoku Tensei" />
+        <div class="video-info"><h3>Mushoku Tensei - Rudeus vs Orsted Edit</h3><p>Vidéo · 0:28 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_7" data-title="video_7" data-video="./video_7.mp4">
-        <img class="thumbnail" src="./thumb_7.png" alt="video_7" />
-        <div class="video-info"><h3>video_7</h3><p>Vidéo · 1:15 min</p></div>
+      <!-- Vidéo 7 -->
+      <article class="video-card" data-category="Demon Slayer" data-title="Demon Slayer - Ubuyashiki Sacrifice Edit" data-video="./video_7.mp4">
+        <img class="thumbnail" src="./thumb_7.png" alt="Demon Slayer" />
+        <div class="video-info"><h3>Demon Slayer - Ubuyashiki Sacrifice Edit</h3><p>Vidéo · 0:34 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_8" data-title="video_8" data-video="./video_8.mp4">
-        <img class="thumbnail" src="./thumb_8.png" alt="video_8" />
-        <div class="video-info"><h3>video_8</h3><p>Vidéo · 1:20 min</p></div>
+      <!-- Vidéo 8 -->
+      <article class="video-card" data-category="Demon Slayer" data-title="Demon Slayer - Zenitsu vs Kaigaku Edit" data-video="./video_8.mp4">
+        <img class="thumbnail" src="./thumb_8.png" alt="Demon Slayer" />
+        <div class="video-info"><h3>Demon Slayer - Zenitsu vs Kaigaku Edit</h3><p>Vidéo · 0:24 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_9" data-title="video_9" data-video="./video_9.mp4">
-        <img class="thumbnail" src="./thumb_9.png" alt="video_9" />
-        <div class="video-info"><h3>video_9</h3><p>Vidéo · 0:45 min</p></div>
+      <!-- Vidéo 9 -->
+      <article class="video-card" data-category="Étincelles de demain" data-title="Étincelles de demain Edit" data-video="./video_9.mp4">
+        <img class="thumbnail" src="./thumb_9.png" alt="Étincelles de demain" />
+        <div class="video-info"><h3>Étincelles de demain Edit</h3><p>Vidéo · 0:35 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_10" data-title="video_10" data-video="./video_10.mp4">
-        <img class="thumbnail" src="./thumb_10.png" alt="video_10" />
-        <div class="video-info"><h3>video_10</h3><p>Vidéo · 1:10 min</p></div>
+      <!-- Vidéo 10 -->
+      <article class="video-card" data-category="Bleach" data-title="Bleach - Yamamoto Bankai Edit" data-video="./video_10.mp4">
+        <img class="thumbnail" src="./thumb_10.png" alt="Bleach - Yamamoto Bankai" />
+        <div class="video-info"><h3>Bleach - Yamamoto Bankai Edit</h3><p>Vidéo · 0:59 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_11" data-title="video_11" data-video="./video_11.mp4">
-        <img class="thumbnail" src="./thumb_11.png" alt="video_11" />
-        <div class="video-info"><h3>video_11</h3><p>Vidéo · 0:55 min</p></div>
+      <!-- Vidéo 11 -->
+      <article class="video-card" data-category="One Piece" data-title="One Piece - Zoro vs King Edit" data-video="./video_11.mp4">
+        <img class="thumbnail" src="./thumb_11.png" alt="One Piece - Zoro vs King" />
+        <div class="video-info"><h3>One Piece - Zoro vs King Edit</h3><p>Vidéo · 0:24 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_12" data-title="video_12" data-video="./video_12.mp4">
-        <img class="thumbnail" src="./thumb_12.png" alt="video_12" />
-        <div class="video-info"><h3>video_12</h3><p>Vidéo · 1:30 min</p></div>
+      <!-- Vidéo 12 -->
+      <article class="video-card" data-category="My Hero Academia" data-title="My Hero Academia - Bakugo Edit" data-video="./video_12.mp4">
+        <img class="thumbnail" src="./thumb_12.png" alt="My Hero Academia - Bakugo" />
+        <div class="video-info"><h3>My Hero Academia - Bakugo Edit</h3><p>Vidéo · 0:39 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_13" data-title="video_13" data-video="./video_13.mp4">
-        <img class="thumbnail" src="./thumb_13.png" alt="video_13" />
-        <div class="video-info"><h3>video_13</h3><p>Vidéo · 1:05 min</p></div>
+      <!-- Vidéo 13 -->
+      <article class="video-card" data-category="Demon Slayer" data-title="Demon Slayer - Tanjiro & Nezuko Edit" data-video="./video_13.mp4">
+        <img class="thumbnail" src="./thumb_13.png" alt="Demon Slayer - Tanjiro & Nezuko" />
+        <div class="video-info"><h3>Demon Slayer - Tanjiro & Nezuko Edit</h3><p>Vidéo · 0:20 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_14" data-title="video_14" data-video="./video_14.mp4">
-        <img class="thumbnail" src="./thumb_14.png" alt="video_14" />
-        <div class="video-info"><h3>video_14</h3><p>Vidéo · 0:40 min</p></div>
+      <!-- Vidéo 14 -->
+      <article class="video-card" data-category="Demon Slayer" data-title="Demon Slayer - Multi Characters Edit" data-video="./video_14.mp4">
+        <img class="thumbnail" src="./thumb_14.png" alt="Demon Slayer - Multi Characters" />
+        <div class="video-info"><h3>Demon Slayer - Multi Characters Edit</h3><p>Vidéo · 1:00 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_15" data-title="video_15" data-video="./video_15.mp4">
-        <img class="thumbnail" src="./thumb_15.png" alt="video_15" />
-        <div class="video-info"><h3>video_15</h3><p>Vidéo · 1:18 min</p></div>
+      <!-- Vidéo 15 -->
+      <article class="video-card" data-category="Weathering With You" data-title="Weathering With You Edit" data-video="./video_15.mp4">
+        <img class="thumbnail" src="./thumb_15.png" alt="Weathering With You" />
+        <div class="video-info"><h3>Weathering With You Edit</h3><p>Vidéo · 0:21 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_16" data-title="video_16" data-video="./video_16.mp4">
-        <img class="thumbnail" src="./thumb_16.png" alt="video_16" />
-        <div class="video-info"><h3>video_16</h3><p>Vidéo · 0:50 min</p></div>
+      <!-- Vidéo 16 -->
+      <article class="video-card" data-category="Jujutsu Kaisen" data-title="Jujutsu Kaisen - Yuta Okkotsu Edit" data-video="./video_16.mp4">
+        <img class="thumbnail" src="./thumb_16.png" alt="Jujutsu Kaisen - Yuta Okkotsu" />
+        <div class="video-info"><h3>Jujutsu Kaisen - Yuta Okkotsu Edit</h3><p>Vidéo · 0:50 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_17" data-title="video_17" data-video="./video_17.mp4">
-        <img class="thumbnail" src="./thumb_17.png" alt="video_17" />
-        <div class="video-info"><h3>video_17</h3><p>Vidéo · 1:25 min</p></div>
+      <!-- Vidéo 17 -->
+      <article class="video-card" data-category="Black Clover" data-title="Black Clover Edit" data-video="./video_17.mp4">
+        <img class="thumbnail" src="./thumb_17.png" alt="Black Clover" />
+        <div class="video-info"><h3>Black Clover Edit</h3><p>Vidéo · 0:19 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_18" data-title="video_18" data-video="./video_18.mp4">
-        <img class="thumbnail" src="./thumb_18.png" alt="video_18" />
-        <div class="video-info"><h3>video_18</h3><p>Vidéo · 1:00 min</p></div>
+      <!-- Vidéo 18 -->
+      <article class="video-card" data-category="Bleach" data-title="Bleach - Shunsui Kyoraku Bankai Edit" data-video="./video_18.mp4">
+        <img class="thumbnail" src="./thumb_18.png" alt="Bleach - Shunsui Kyoraku" />
+        <div class="video-info"><h3>Bleach - Shunsui Kyoraku Bankai Edit</h3><p>Vidéo · 0:12 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_19" data-title="video_19" data-video="./video_19.mp4">
-        <img class="thumbnail" src="./thumb_19.png" alt="video_19" />
-        <div class="video-info"><h3>video_19</h3><p>Vidéo · 0:48 min</p></div>
+      <!-- Vidéo 19 -->
+      <article class="video-card" data-category="Solo Leveling x Jujutsu Kaisen" data-title="Solo Leveling x Jujutsu Kaisen Edit" data-video="./video_19.mp4">
+        <img class="thumbnail" src="./thumb_19.png" alt="Solo Leveling x Jujutsu Kaisen" />
+        <div class="video-info"><h3>Solo Leveling x Jujutsu Kaisen Edit</h3><p>Vidéo · 1:00 min</p></div>
       </article>
 
-      <article class="video-card" data-category="video_20" data-title="video_20" data-video="./video_20.mp4">
-        <img class="thumbnail" src="./thumb_20.png" alt="video_20" />
-        <div class="video-info"><h3>video_20</h3><p>Vidéo · 1:12 min</p></div>
+      <!-- Vidéo 20 -->
+      <article class="video-card" data-category="The Quintessential Quintuplets" data-title="Itsuki Nakano Edit" data-video="./video_20.mp4">
+        <img class="thumbnail" src="./thumb_20.png" alt="Itsuki Nakano" />
+        <div class="video-info"><h3>Itsuki Nakano Edit</h3><p>Vidéo · 0:17 min</p></div>
       </article>
 
     </div>
